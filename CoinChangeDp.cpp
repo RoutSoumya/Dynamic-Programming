@@ -8,8 +8,7 @@ int count(int coins[], int n, int sum){
     // We need sum+1 rows as the table filling in bottomsup manner
     int table[sum + 1][n];
  
-    // Fill the entries for 0
-    // value case (sum = 0)
+    // Fill the entries for 0 and value case (sum = 0)
     for (i = 0; i < n; i++) table[0][i] = 1;
  
     // Fill rest of the table entries in bottom up manner
