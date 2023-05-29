@@ -10,7 +10,7 @@ int count(int coins[], int n, int sum) {
         return 0; // No solution
     }
     if(n <= 0) {
-        return 0; // If no coins and sum > 0 then no coins
+        return 0; // If no coins and sum > 0 then there will be no coins
     }
     return count(coins, n-1, sum) + count(coins, n, sum - coins[n-1]);
 }

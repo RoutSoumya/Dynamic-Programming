@@ -2,6 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// DP Approach
 int fibo_dynamic(int n) {
     int arr[n+2];
     int i;
