@@ -2,20 +2,30 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// DP Approach
+// Memoization
+int fib(int n, vector<int> dp) {
+    if(n<=1) return n;
+    if(dp[n] != -1) return dp[n];
+    return dp[n] = fib(n-1, dp) + fib(n-2, dp);
+}
+
+// Tabulation
 int fibo_dynamic(int n) {
-    int arr[n+2];
+    int dp[n+2];
     int i;
-    arr[0] = 0;
-    arr[1] = 1;
+    dp[0] = 0;
+    dp[1] = 1;
     for(i=2; i<=n; i++) {
-        arr[i] = arr[i-1] + arr[i-2];
+        dp[i] = dp[i-1] + dp[i-2];
     }
-    return arr[n];
+    return dp[n];
 }
 
 int32_t main() {
     int n;
     cin >> n;
     cout << fibo_dynamic(n) << endl;
+
+    // vector<int> dp(n+1, -1);
+    // cout << fib(n, dp);
 }
