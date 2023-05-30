@@ -9,7 +9,7 @@ int fib(int n, vector<int> dp) {
     return dp[n] = fib(n-1, dp) + fib(n-2, dp);
 }
 
-// Tabulation
+// Tabulation Method 1
 int fibo_dynamic(int n) {
     int dp[n+2];
     int i;
@@ -24,8 +24,19 @@ int fibo_dynamic(int n) {
 int32_t main() {
     int n;
     cin >> n;
-    cout << fibo_dynamic(n) << endl;
+    // cout << fibo_dynamic(n) << endl;
 
     // vector<int> dp(n+1, -1);
     // cout << fib(n, dp);
+
+    // Tabulation approach 2 w/o using arrays
+    int prev2 = 0;
+    int prev1 = 1;
+    for(int i=2; i<=n; i++) {
+        int curri = prev1 + prev2;
+        prev2 + prev1;
+        prev1 = curri;
+    }
+    cout << prev1;
+
 }
