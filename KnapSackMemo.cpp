@@ -2,11 +2,8 @@
 using namespace std;
 
 int knapSackRec(int W, int wt[], int val[], int i, int** dp) {
-	if (i < 0)
-		return 0;
-	if (dp[i][W] != -1)
-		return dp[i][W];
-
+	if (i < 0) return 0;
+	if (dp[i][W] != -1) return dp[i][W];
 	if (wt[i] > W) {
 		dp[i][W] = knapSackRec(W, wt, val, i - 1, dp);
 		return dp[i][W];
