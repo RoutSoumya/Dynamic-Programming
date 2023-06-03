@@ -17,11 +17,8 @@ int knapSackRec(int W, int wt[], int val[], int i, int** dp) {
 int knapSack(int W, int wt[], int val[], int n) {
 	int** dp;
 	dp = new int*[n];
-	for (int i = 0; i < n; i++)
-		dp[i] = new int[W + 1];
-	for (int i = 0; i < n; i++)
-		for (int j = 0; j < W + 1; j++)
-			dp[i][j] = -1;
+	for (int i = 0; i < n; i++) dp[i] = new int[W + 1];
+	for (int i = 0; i < n; i++) for (int j = 0; j < W + 1; j++) dp[i][j] = -1;
 	return knapSackRec(W, wt, val, n - 1, dp);
 }
 
