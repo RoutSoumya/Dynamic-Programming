@@ -24,7 +24,7 @@ int knapSackRec(int W, int wt[], int val[], int i, int **dp) {
         return dp[i][W];
     }
 }
-
+ 
 int knapSackMem(int W, int wt[], int val[], int n) {
     int **dp;
     dp = new int*[n];
