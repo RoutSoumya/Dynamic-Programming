@@ -11,7 +11,7 @@ int knapSack(int W, int wt[] ,int val[], int n)
     else return max(val[n-1] + knapSack(W-wt[n-1],wt,val,n-1),
     knapSack(W,wt,val,n-1));
 }
-
+ 
 // MEMOIZATION
 int knapSackRec(int W, int wt[], int val[], int i, int **dp)
 {
@@ -21,10 +21,10 @@ int knapSackRec(int W, int wt[], int val[], int i, int **dp)
     {
         dp[i][W] = knapSackRec(W,wt,val,i-1,dp);
         return dp[i][W];
-    }
-    else {
-        dp[i][W] = max(val[i] + knapSackRec(W-wt[i],wt,val,i-1,dp),
-        knapSackRec(W,wt,val,i-1,dp));
+    } else {
+        dp[i][W] = max(
+            val[i] + knapSackRec(W-wt[i],wt,val,i-1,dp),knapSackRec(W,wt,val,i-1,dp)
+            ); 
         return dp[i][W];
     }
 }
