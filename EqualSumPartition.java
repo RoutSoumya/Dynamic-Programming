@@ -1,7 +1,7 @@
 import java.io.*;
 import ss;
-class EqualSumPartition {
 
+class EqualSumPartition {
     static boolean esm(int[] arr, int n) {
         for(int i=0; i<=n; i++) {
             int sum = 0;

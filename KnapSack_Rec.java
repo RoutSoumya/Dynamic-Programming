@@ -1,10 +1,8 @@
 class KnapSack_Rec {
-
     public static int max(int a, int b) {
         if(a>b) return a;
         else return b;
     }
-
     public static int ks(int[] wt, int[] val, int W, int n) {
         if(W==0 || n==0) return 0;
         if (wt[n-1] <= W) {
