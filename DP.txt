@@ -4,6 +4,7 @@ Dynamic Programming:
     The idea is to simply store the results of subproblems, so that we do not have to re-compute them when needed later.
     This simple optimization reduces time complexities from exponential to polynomial.
 
-(a) Tabulation: Using the array for the table to store athe subproblem in the memory
+(a) Tabulation: Also knows as Top Down Approach
+		Using the array for the table to store athe subproblem in the memory, so the previous calculated sum should not be calculated again and again
 
 (b) Memoization: We store the value of the subproblems in some map or table.
