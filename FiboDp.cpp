@@ -24,10 +24,6 @@ int fibo_dynamic(int n) {
 int32_t main() {
     int n;
     cin >> n;
-    // cout << fibo_dynamic(n) << endl;
-
-    // vector<int> dp(n+1, -1);
-    // cout << fib(n, dp);
 
     // Tabulation approach 2 w/o using arrays
     int prev2 = 0;
